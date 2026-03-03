@@ -1,29 +1,19 @@
-
+/*Задание 4. Боевой симулятор (Все темы вместе)
+Это мини-проект, который максимально приближен к логике бота.
+Логика: В main методе создаются два объекта Hero. В цикле while они наносят друг другу удары
+(используя Random для урона), пока у одного не закончится здоровье. */
 public class Main {
     public static void main(String[] args) {
-        Inventory inventory = new Inventory();
-        inventory.addItem("Меч");
-        inventory.addItem("Щит");
-        inventory.addItem("Зелье лечения");
-        inventory.addItem("Яд");
-        inventory.addItem("Свиток телепорта");
-        inventory.addItem("Щит");
+        LootBox<Weapon> weaponBox = new LootBox<>();
+        weaponBox.setItem(new Weapon("Экскалибур"));
+        Weapon mySword = weaponBox.getItem();
 
-        inventory.showInventory();
+        LootBox<Potion> potionBox=new LootBox<>();
+        potionBox.setItem(new Potion("Зелье лечения"));
+        Potion myPotion = potionBox.getItem();
 
-        inventory.searchItem("Яд");
-
-        ConstructorHero constructorHero=new ConstructorHero("Владус", "Воин",30);
-
-        constructorHero.displayStats();
-
-        constructorHero.takeDamage(20);
-
-        constructorHero.displayStats();
-
-        constructorHero.takeDamage(500);
-
-        constructorHero.displayStats();
-
+        LootBox<String> gold=new LootBox<>();
+        gold.setItem(new String("100"));
+        String myGold= gold.getItem();
     }
 }

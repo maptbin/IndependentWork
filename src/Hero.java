@@ -7,7 +7,7 @@
 Метод takeDamage(int damage): уменьшает здоровье. Если оно падает до 0 — выводит «Герой пал в бою».
 Метод displayStats(): выводит карточку персонажа.
 Цель: Понять, как объект хранит свое состояние. */
-public class ConstructorHero {
+public class Hero {
     //Создаем поля для дальнейшей работы с ними.
 
     private String name;
@@ -17,7 +17,7 @@ public class ConstructorHero {
    private double remainingHealth;
 
     //Создаем конструктор для определения созданных ранее полей
-    ConstructorHero(String name, String heroClass, int level) {
+    Hero(String name, String heroClass, int level) {
         this.name = name;
         this.heroClass = heroClass;
         this.level = level;
