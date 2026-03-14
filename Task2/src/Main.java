@@ -36,6 +36,12 @@
 Совет: Пусть пишет весь код в одном проекте. Так в конце он увидит, как маленькие части собираются в одну большую игру. */
 public class Main {
     public static void main(String[] args) {
+        System.out.println("=== ОТКРЫВАЕМ 10 СУНДУКОВ ===");
 
+        for (int i = 1; i <= 10; i++) {
+            Weapon loot = LootGenerator.generateWeapon();
+            // Теперь мы просто печатаем объект, и toString() срабатывает сам!
+            System.out.println(i + ". " + loot);
+        }
     }
 }

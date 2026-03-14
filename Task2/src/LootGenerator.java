@@ -24,9 +24,10 @@ public class LootGenerator {
         } else if (rareChance < 99) {
             selectedRarity = Rarity.EPIC;
             finalBaseDamage = random.nextInt(30) + 22;
-        } else
+        } else {
             selectedRarity = Rarity.LEGENDARY;
-        finalBaseDamage = 100;
+            finalBaseDamage = 100;
+        }
         return new Weapon(finalBaseDamage, selectedRarity);
     }
 

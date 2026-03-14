@@ -16,6 +16,11 @@ public class Weapon {
         this.rarity = rarity;
     }
 
+    @Override
+    public String toString() {
+        return "Оружие [" + rarity + "] | Базовый урон: " + baseDamage + " | Итоговый урон: " + calculateDamage();
+    }
+
     public double calculateDamage() {
         return baseDamage * rarity.getModifyDamage();
     }
